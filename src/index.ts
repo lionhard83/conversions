@@ -7,6 +7,10 @@ app.get('/alive', async (req: Request, res: Response) => {
     res.json({message: 'Il server è in running'});
 });
 
+app.get('/alive2', async (req: Request, res: Response) => {
+    res.json({message: 'Il server è in running'});
+});
+
 app.get('/', async (req: Request, res: Response) => {
     const host = 'api.frankfurter.app';
     const response = await fetch(`https://${host}/latest?amount=10&from=GBP&to=USD`);
