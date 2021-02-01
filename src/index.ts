@@ -3,6 +3,13 @@ const app = express();
 import fetch, {Response as R} from 'node-fetch';
 import { Conversion } from './Conversion';
 
+app.get('/alive', async (req: Request, res: Response) => {
+    res.json({message: 'Il server è in running'});
+});
+
+app.get('/alive2', async (req: Request, res: Response) => {
+    res.json({message: 'Il server è in running'});
+});
 
 app.get('/', async (req: Request, res: Response) => {
     const host = 'api.frankfurter.app';
